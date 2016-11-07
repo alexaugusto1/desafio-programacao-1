@@ -1,0 +1,45 @@
+<h2>
+  Myfreecomm Sales
+  <%= link_to "Import Sales", new_sale_path, class: "btn btn-primary pull-right"  %>
+</h2>
+<hr>
+<p id="notice" class="text-info"><%= notice %></p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Purchaser</th>
+      <th>Merchant Name</th>
+      <th>Merchant Address</th>
+      <th>Item Description</th>
+      <th>Purchase Count</th>
+      <th>Item Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr class="active">
+      <% if @sales.count > 0 %>
+        <td colspan="4"></td>
+        <td><strong>Total</strong></td>
+        <td colspan="2">
+          <strong><%= number_to_currency @total, unit: "R$" %></strong>
+        </td>
+      <% else %>
+        <td colspan="7" align="center">No recorded sale. Start importing right now.</td>
+      <% end %>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.purchaser_name %></td>
+        <td><%= sale.purchaser_name %></td>
+        <td><%= sale.merchant_address %></td>
+        <td><%= sale.item_description %></td>
+        <td><%= sale.purchase_count %></td>
+        <td><%= number_to_currency sale.item_price, unit: "R$" %></td>
+        <td><%= link_to 'Delete', sale, method: :delete, class: "btn btn-xs btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
