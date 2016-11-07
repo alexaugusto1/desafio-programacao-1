@@ -1,5 +1,5 @@
 # Desafio de programação 1
-Desafio de programação da empresa Nexaas.
+Desafio de programação da empresa [Nexaas](http://www.nexaas.com/).
 
 ## Descrição do projeto
 Você recebeu um arquivo de texto com os dados de vendas da empresa. Precisamos criar uma maneira para que estes dados sejam importados para um banco de dados.
@@ -10,7 +10,7 @@ Sua tarefa é criar uma interface web que aceite upload de arquivos, normalize o
 
 ### Versões utilizadas
 
-Ruby 2.3.1
+Ruby 2.3.1  
 Rails 4.2.3
 
 ### Passos para rodar a aplicação
